@@ -1,0 +1,135 @@
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Darkcyan: hsl(184, 100%, 22%);
+    --Verydarkcyan: hsl(179, 100%, 13%);
+    --Transparent-white : hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray : hsl(0, 0%, 95%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* font-family: 'Lexend Deca', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* font-family: 'Big Shoulders Display', cursive; */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--Very-light-gray);
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    justify-content: space-evenly;
+    /* max-width: 850px;
+    height: 450px; */
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.card-section:first-child{
+    background-color: var(--Bright-orange);
+}
+
+.card-section:nth-child(2){
+    background-color: var(--Darkcyan);
+}
+
+.card-section:nth-child(3){
+    background-color: var(--Verydarkcyan)
+}
+
+.card-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 0 35px;
+    height: 450px;
+    width: 290px;
+}
+
+.card-section img{
+    width: 50px;
+    object-fit: cover;
+}
+
+.card-section h1{
+    color: #fff;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: -20px 0;
+}
+
+.card-section p{
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Transparent-white);
+    font-size: 15px;
+    margin-top: -5px;
+}
+
+.btn{
+    display: block;
+    padding: 13px 20px;
+    border-radius: 25px;
+    border: none;
+    width: 60%;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color:transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.button-1{
+    color: var(--Bright-orange);
+}
+
+.button-2{
+    color: var(--Darkcyan);
+}
+
+.button-3{
+    color: var(--Verydarkcyan);
+}
+
+@media only screen and (max-width: 800px){
+
+    .container{
+        margin: 0 auto;
+        padding: 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1500px;
+    }
+
+    .card{
+        grid-template-columns: 1fr;
+    }
+
+}
